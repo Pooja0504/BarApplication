@@ -1,6 +1,7 @@
 package pooja.jadhav.barapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menubar, menu);
         setContentView(R.layout.activity_main);
